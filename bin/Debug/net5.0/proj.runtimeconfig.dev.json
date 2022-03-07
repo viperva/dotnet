@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/Viper/.dotnet/store/|arch|/|tfm|",
+      "/Users/Viper/.nuget/packages"
+    ]
+  }
+}
