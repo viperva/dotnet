@@ -16,3 +16,47 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.bttn{
+  border-radius: 5px;
+  margin: 1%;
+  width: 10%;
+  border: none;
+  background-color: darkgreen;
+  color: beige;
+}
+
+.input{
+  margin: 1%;
+  border-radius: 5px;
+}
+
+.container h1{
+  margin: 1%;
+}
+
+.label{
+  margin: 1%;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.spanik{
+  background-color: darkolivegreen;
+  padding: 15px;
+  color: beige;
+  border: 2px rgb(2, 82, 2) solid;
+  border-radius: 5px;
+}
