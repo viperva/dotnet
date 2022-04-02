@@ -1,20 +1,39 @@
 ﻿@page
 @model IndexModel;
 @{
-ViewData["Title"] = "FizzBuzz";
+ViewData["Title"] = "Person";
 }
-<div class="container">
-    <h1 class="display-4">Welcome @Model.Name</h1>
+<div class="containerMy">
+    <h1 class="title">PODAJ SWOJE DANE ZA DARMO:</h1>
 
-    <span asp-validation-for="Fizzbuzz.Number" class="text-danger"></span>
     <form class="form" method="post">
-        <label class="label" asp-for="Fizzbuzz.Number"></label>
-        <input class="input" asp-for="Fizzbuzz.Number" />
+
+        <label class="label" asp-for="person.Year">
+            <p class="titleContent">Rok urodzenia:</p>
+        </label>
+        
+        <div class="inputContainer">
+        <input class="input" asp-for="person.Year" />
+        </div>
+
+        <span asp-validation-for="person.Year" class="textError"></span>
+
+        <label class="label" asp-for="person.Name">
+            <p class="titleContent">Imię:</p>
+        </label>
+        
+        <div class="inputContainer">
+        <input class="input" asp-for="person.Name" />
+        </div>
+
+        <span asp-validation-for="person.Name" class="textError"></span>
+
         <button class="bttn" type="submit">Zatwierdź</button>
-        @if(Model.Fizzbuzz.process()!=""){
-            <span class="spanik" asp-validation-for="Fizzbuzz.Number">
-                @Model.Fizzbuzz.process()
-            </span>
-        }
     </form>
+
+    @if(Model.person.process()!=""){
+        <span class="spanik">
+            @Model.person.process()
+        </span>
+    }
 </div>

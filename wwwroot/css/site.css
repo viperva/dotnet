@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+
 }
 
 @media (min-width: 768px) {
@@ -11,16 +12,31 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  /* border: 3px solid red; */
+  background-color: rgb(99, 89, 36);
+  border: 60px solid rgba(0, 0, 0, 0.89);
+
 }
 
 body {
   margin-bottom: 60px;
+  background-color: rgb(99, 89, 36);
 }
 
-.container{
+.navItem{
+  color: antiquewhite;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Courier', monospace;
+  margin: 0 5% 0 0;
+}
+
+.containerMy{
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: rgb(99, 89, 36);
+  margin-top: 1%;
 }
 
 .form{
@@ -30,33 +46,93 @@ body {
 }
 
 .bttn{
-  border-radius: 5px;
-  margin: 1%;
-  width: 10%;
+  /* border-radius: 5px; */
+  margin: 40px 0 15px 0;
+  width: 20%;
+  /* height: 3vh; */
+  font-size: 25px;
+  padding: 10px;
+  font-family: 'Courier', Courier, monospace;
+  font-weight: 550;
   border: none;
-  background-color: darkgreen;
+  background-color: rgba(0, 100, 0, 0.5);
   color: beige;
 }
 
-.input{
-  margin: 1%;
-  border-radius: 5px;
+.bttn:hover{
+  background-color: rgba(0, 100, 0, 1);
 }
 
-.container h1{
-  margin: 1%;
+.input{
+  margin: 15px 0 15px 0;
+  border-radius: 0;
+  color: antiquewhite;
+  padding: 10px;
+  width: 100%;
+  font-size: 25px;
+  font-family: 'Courier', monospace;
+  background-color: rgba(0, 0, 0, 0.493);
+  border: none;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.inputContainer{
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+.titleContent{
+  font-size: 25px;
+  font-family: 'Courier', monospace;
+  margin: 0;
+}
+
+.title{
+  font-size: 50px;
+  color: rgb(34, 26, 11);
+  font-weight: 1000;
+
+  font-family: 'Courier', monospace;
+}
+
+.containerMy h1{
+  /* border: 10px solid blue; */
+  color:rgba(0, 0, 0, 0.7);
+  margin: 50px 0 0px 0;
+  text-align: center;
 }
 
 .label{
-  margin: 1%;
+  margin: 30px 0 0px 0;
+  font-family: 'Courier', monospace;
   font-size: 25px;
+  color: beige;
   font-weight: 700;
 }
 
 .spanik{
-  background-color: darkolivegreen;
+  background-color: rgba(31, 46, 4, 0.623);
   padding: 15px;
-  color: beige;
-  border: 2px rgb(2, 82, 2) solid;
-  border-radius: 5px;
+  color: white;
+  opacity: 90%;
+  margin: 50px 0 0 0;
+  font-size: 25px;
+  font-weight: 500;
+  /* border: 3px solid red; */
+  
+  font-family: 'Courier', monospace;
+}
+
+.textError{
+  font-family: 'Courier', monospace;
+  font-size: 19px;
+  color: rgb(95, 6, 6);
 }

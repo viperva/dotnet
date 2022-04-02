@@ -24,3 +24,6 @@
 /Volumes/dysk/SZKOLA/sem4/dotnet/proj/obj/Debug/net6.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /Volumes/dysk/SZKOLA/sem4/dotnet/proj/obj/Debug/net6.0/scopedcss/bundle/proj.styles.css
 /Volumes/dysk/SZKOLA/sem4/dotnet/proj/obj/Debug/net6.0/scopedcss/projectbundle/proj.bundle.scp.css
+/Volumes/dysk/SZKOLA/sem4/dotnet/proj/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Volumes/dysk/SZKOLA/sem4/dotnet/proj/bin/Debug/net6.0/System.Security.Permissions.dll
+/Volumes/dysk/SZKOLA/sem4/dotnet/proj/obj/Debug/net6.0/proj.csproj.CopyComplete

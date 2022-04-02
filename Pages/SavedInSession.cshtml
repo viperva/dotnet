@@ -1,0 +1,13 @@
+﻿@page
+@model proj.Pages.SavedInSessionModel
+@{
+    ViewData["Title"] = "Data in session";
+}
+
+<p>Dane Zapisane w sesjssi</p>
+
+@if(Model.person != null){
+    <p>
+        @Html.DisplayNameFor(model => Model.person.Year) : @Model.person.Year
+    </p>
+}

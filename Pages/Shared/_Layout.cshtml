@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Fizz Buzz</a>
+                @* <a class="navbar-brand" asp-area="" asp-page="/Index">Fizz Buzz</a> *@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/SavedInSession">Saved in session</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -36,9 +39,11 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer">
         <div class="container">
-            &copy; 2022 - Fizz Buzz - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <a class="navItem" asp-area="" asp-page="/Index">Index</a>
+            <a class="navItem" asp-area="" asp-page="/Privacy">Prywatność</a>
+            <a class="navItem" asp-area="" asp-page="/SavedInSession">Zapisane</a>
         </div>
     </footer>
 
