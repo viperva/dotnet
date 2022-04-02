@@ -15,25 +15,39 @@ namespace proj.Pages{
 
         [BindProperty]
         public Person person {get; set;}
+        public People people = new People();
+        
 
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            // person = new Person();
+            person = new Person();
         }
 
         public void OnGet()
         {
+            var Data = HttpContext.Session.GetString("Data");
+            if(Data != null){
+                people = JsonConvert.DeserializeObject<People>(Data);
+            }
         }
         public IActionResult OnPost(){
+
+            var Data = HttpContext.Session.GetString("Data");
+            if(Data != null){
+                people = JsonConvert.DeserializeObject<People>(Data);
+            }
             
-            if(!ModelState.IsValid){
-                // return Page();
-                return RedirectToPage("/Privacy");
+            if(ModelState.IsValid){
+
+                people.people.Add(person);
+
+                HttpContext.Session.SetString("Data", JsonConvert.SerializeObject(people));
 
             }
-            // HttpContext.Session.SetString("Data", JsonConvert.SerializeObject(person));
-                return RedirectToPage("/Privacy");
+            
+            return Page();
+            
         }
     }
 }
