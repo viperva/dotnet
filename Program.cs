@@ -1,13 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using proj.Data;
+// using proj.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<PeopleContext>(options =>
+// using proj.Data;
+
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PeopleDB")));
 builder.Services.AddMemoryCache();
 builder.Services.AddSession(options => {
     options.IdleTimeout = TimeSpan.FromSeconds(10);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.AddDbContext<PeopleContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("PeopleDB")));
 
 var app = builder.Build();
 

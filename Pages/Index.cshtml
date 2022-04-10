@@ -28,6 +28,16 @@ ViewData["Title"] = "Person";
 
         <span asp-validation-for="person.Name" class="textError"></span>
 
+        <label class="label" asp-for="person.LastName">
+            <p class="titleContent">Nazwisko: (pole opcjonalne)</p>
+        </label>
+        
+        <div class="inputContainer">
+        <input class="input" asp-for="person.LastName" />
+        </div>
+
+        <span asp-validation-for="person.LastName" class="textError"></span>
+
         <button class="bttn" type="submit">Zatwierdź</button>
     </form>
 

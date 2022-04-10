@@ -8,7 +8,7 @@ namespace proj.Pages
 {
     public class SavedInSessionModel : PageModel
     {
-        public People people { get; set; }
+        public People? people { get; set; }
         public void OnGet()
         {
             var Data = HttpContext.Session.GetString("Data");

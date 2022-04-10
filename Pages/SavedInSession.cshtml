@@ -6,7 +6,7 @@
 
 <p class="savedTitle">Dane zapisane w sesji:</p>
 
-@if(Model.people.people.FirstOrDefault() != null){
+@if(Model.people.people.FirstOrDefault() is not null){
 
     <div>
 
@@ -14,7 +14,7 @@
         {
             <div class="myRow">
                 <p>
-                @item.Name , @item.Year -&nbsp; 
+                @item.Name , @item.LastName , @item.Year -&nbsp; 
                 </p>@if(item.Year % 4 == 0){
                     <p>rok przestępny</p>
                 }else{

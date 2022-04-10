@@ -7,20 +7,24 @@ using System.Collections;
 using System.Web;
 using Microsoft.AspNetCore.Session;
 using System.ComponentModel.DataAnnotations;
+using proj.Data;
 
 namespace proj.Pages{
 
     public class IndexModel : PageModel{
         private readonly ILogger<IndexModel> _logger;
-
+        private readonly PeopleContext _context;
+ 
         [BindProperty]
         public Person person {get; set;}
         public People people = new People();
         
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, PeopleContext context)
         {
+
             _logger = logger;
+            _context = context;
             person = new Person();
         }
 
@@ -33,6 +37,12 @@ namespace proj.Pages{
         }
         public IActionResult OnPost(){
 
+            // DateTime date = DateTime.UtcNow.Date;
+            // TimeSpan time = 
+
+            person.date = DateTime.Now.Date;
+            person.time = DateTime.Now.TimeOfDay;
+
             var Data = HttpContext.Session.GetString("Data");
             if(Data != null){
                 people = JsonConvert.DeserializeObject<People>(Data);
@@ -44,6 +54,9 @@ namespace proj.Pages{
 
                 HttpContext.Session.SetString("Data", JsonConvert.SerializeObject(people));
 
+                _context.Person.Add(person);
+                _context.SaveChanges();
+                return Page();
             }
             
             return Page();

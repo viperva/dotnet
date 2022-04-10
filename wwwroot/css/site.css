@@ -144,9 +144,9 @@ input[type=number] {
   height: max-content;
   justify-content: center;
   align-items:center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Courier';
-  margin: 1%;
+  margin: 0.5%;
 }
 
 .myRow p{
